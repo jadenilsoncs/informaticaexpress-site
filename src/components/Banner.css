@@ -1,0 +1,26 @@
+.hero-section {
+  height: 80vh;
+  background: linear-gradient(135deg, var(--azul-escuro) 0%, #2c3e50 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 20px; }
+.hero-content h1 span { color: var(--azul-vibrante); }
+.hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; opacity: 0.9; }
+
+.btn-primary {
+  background: var(--azul-vibrante);
+  color: white; padding: 12px 30px;
+  text-decoration: none; border-radius: 5px; font-weight: bold; margin-right: 15px;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white; padding: 10px 28px;
+  text-decoration: none; border-radius: 5px; font-weight: bold;
+}
