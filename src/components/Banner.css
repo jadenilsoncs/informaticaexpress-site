@@ -10,10 +10,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #1a2b48; /* Cor de fundo caso a imagem falhe */
+  background-color: var(--cor-primaria); /* Usando a variável aqui */
 }
 .slide-content {
-  color: #fff;
+  color: var(--cor-texto-claro);
   padding: 0 20px;
   z-index: 10;
   max-width: 800px;
@@ -24,7 +24,7 @@
   margin-bottom: 20px;
 }
 .slide-content h1 .highlight {
-  color: #2196f3;
+  color: var(--cor-secundaria); /* Azul de destaque do cartão */
 }
 .slide-content p {
   font-size: 1.2rem;
@@ -38,8 +38,8 @@
   flex-wrap: wrap;
 }
 .btn-primary {
-  background-color: #2196f3;
-  color: #fff;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
   padding: 12px 30px;
   border-radius: 5px;
   text-decoration: none;
@@ -47,11 +47,11 @@
   transition: 0.3s;
 }
 .btn-primary:hover {
-  background-color: #1976d2;
+  filter: brightness(1.2); /* Deixa um pouco mais claro ao passar o mouse */
 }
 .btn-secondary {
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--cor-texto-claro);
+  color: var(--cor-texto-claro);
   padding: 10px 28px;
   border-radius: 5px;
   text-decoration: none;
@@ -59,11 +59,12 @@
   transition: 0.3s;
 }
 .btn-secondary:hover {
-  background-color: #fff;
-  color: #1a2b48;
+  background-color: var(--cor-texto-claro);
+  color: var(--cor-primaria);
 }
-/* Customização das setas e pontos do Swiper para combinarem com seu azul */
+
+/* Customização das setas e pontos do Swiper */
 :root {
-  --swiper-navigation-color: #fff;
-  --swiper-pagination-color: #2196f3;
+  --swiper-navigation-color: var(--cor-texto-claro);
+  --swiper-pagination-color: var(--cor-secundaria);
 }

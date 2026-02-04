@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 const Header = () => {
   return (
-    <nav className="header-nav">
+    <header className="main-header">
       <div className="header-container">
         <div className="logo">
-          INFORMÁTICA <span style={{ color: '#2196f3' }}>EXPRESS</span>
+          <Link to="/">
+            INFORMÁTICA <span>EXPRESS</span>
+          </Link>
         </div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/servicos">Serviços</Link>
-          <Link to="/contato">Contato</Link>
+        <nav className="nav-menu">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/servicos" className="nav-link">Serviços</Link>
+          <Link to="/contato" className="nav-link">Contato</Link>
+        </nav>
+        {/* Botão de Orçamento no Header para converter clientes rápido */}
+        <div className="header-cta">
+          <a href="https://wa.me/5537998126948" target="_blank" rel="noopener noreferrer" className="btn-header">
+            Orçamento Grátis
+          </a>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 export default Header;

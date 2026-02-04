@@ -1,0 +1,74 @@
+.main-header {
+  background-color: var(--cor-primaria);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  color: var(--cor-texto-claro);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: var(--cor-secundaria);
+}
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+.nav-link {
+  color: var(--cor-texto-claro);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: var(--transicao);
+  position: relative;
+}
+.nav-link:hover {
+  color: var(--cor-secundaria);
+}
+/* Linha bonitinha que aparece embaixo do link no hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--cor-secundaria);
+  transition: var(--transicao);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.btn-header {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.btn-header:hover {
+  filter: brightness(1.1);
+}
+/* Responsividade Básica */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Por enquanto vamos esconder no celular, no próximo passo faremos o menu que abre e fecha */
+  }
+}

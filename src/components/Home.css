@@ -1,0 +1,4 @@
+.home-main-container {
+  margin-top: 80px; /* Mesma altura do Header */
+  overflow-x: hidden;
+}

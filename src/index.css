@@ -1,3 +1,12 @@
+/*Variáveis Globais - A base profissional do seu projeto*/
+:root {
+  --cor-primaria: #1a2b48;/*Azul Marinho Profundo*/
+  --cor-secundaria: #2196f3;/*Azul Royal Vibrante*/
+  --cor-texto-claro: #ffffff;
+  --cor-texto-escuro: #333333;
+  --cor-fundo-cinza: #f4f4f4;
+  --transicao: 0.3s ease;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +14,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--cor-texto-escuro);
+  background-color: #ffffff;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+/* Reset de links para todo o site */
+a {
+  text-decoration: none;
+  transition: var(--transicao);
 }

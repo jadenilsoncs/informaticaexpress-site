@@ -1,21 +1,26 @@
 import React from 'react';
 import './Footer.css';
 const Footer = () => {
+  const anoAtual = new Date().getFullYear();
   return (
-    <footer style={{ backgroundColor: '#1a2b48', color: '#fff', padding: '40px 20px', marginTop: '50px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-        <div>
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-section">
           <h4>Informática Express</h4>
-          <p>Soluções em TI</p>
+          <p>Soluções inteligentes em TI para você e sua empresa.</p>
         </div>
-        <div>
+        <div className="footer-section">
           <h4>Contato</h4>
-          <p>(37) 9 9812-6948</p>
-          <p>Cláudio/MG</p>
+          <p>📍 Cláudio/MG</p>
+          <p>📞 (37) 9 9812-6948</p>
+        </div>
+        <div className="footer-section">
+          <h4>Horário de Atendimento</h4>
+          <p>Segunda a Sexta: 08:00 às 18:00</p>
         </div>
       </div>
-      <div style={{ textAlign: 'center', marginTop: '20px', borderTop: '1px solid #333', paddingTop: '10px' }}>
-        <p>&copy; 2026 Informática Express.</p>
+      <div className="footer-bottom">
+        <p>&copy; {anoAtual} Informática Express - Todos os direitos reservados.</p>
       </div>
     </footer>
   );
