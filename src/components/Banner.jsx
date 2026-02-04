@@ -2,13 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-// Estilos Swiper (Importante manter igual à Detalhe)
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Banner.css';
+
 const Banner = () => {
   const whatsappLink = "https://wa.me/5537998126948?text=Olá! Vi seu site e gostaria de um orçamento.";
+  const path = "/assets/img/carrossel/";
+
   return (
     <section className="banner-slider">
       <Swiper
@@ -20,9 +23,8 @@ const Banner = () => {
         loop={true}
         style={{ height: '100%' }}
       >
-        {/* SLIDE 1: SUPORTE */}
         <SwiperSlide>
-          <div className="slide-item" style={{ background: 'linear-gradient(rgba(26, 43, 72, 0.8), rgba(26, 43, 72, 0.8)), url("/assets/img/banner1.jpg") center/cover' }}>
+          <div className="slide-item" style={{ background: `linear-gradient(rgba(26, 43, 72, 0.7), rgba(26, 43, 72, 0.7)), url("${path}banner1.jpg") center/cover` }}>
             <div className="slide-content">
               <h1>Tecnologia de <span className="highlight">Resultado</span></h1>
               <p>Suporte especializado e infraestrutura de TI para sua empresa não parar.</p>
@@ -33,9 +35,9 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* SLIDE 2: DESENVOLVIMENTO WEB */}
+
         <SwiperSlide>
-          <div className="slide-item" style={{ background: 'linear-gradient(rgba(33, 150, 243, 0.7), rgba(26, 43, 72, 0.9)), url("/assets/img/banner2.jpg") center/cover' }}>
+          <div className="slide-item" style={{ background: `linear-gradient(rgba(33, 150, 243, 0.6), rgba(26, 43, 72, 0.8)), url("${path}banner2.jpg") center/cover` }}>
             <div className="slide-content">
               <h1>Sua Empresa <span className="highlight">Online</span></h1>
               <p>Criação de sites profissionais e sistemas sob medida com tecnologia de ponta.</p>
@@ -49,4 +51,5 @@ const Banner = () => {
     </section>
   );
 };
+
 export default Banner;
